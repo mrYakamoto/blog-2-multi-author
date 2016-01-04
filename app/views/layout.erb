@@ -14,6 +14,13 @@
     <div class="max-w-700 center wrap-float">
       <nav class="clearfix mar-b-1">
         <ul class="no-bullets no-margin no-padding right">
+          <% if session["user"] == nil %>
+          <li class="pipe-separate t-light-blue left"><a href="/register">register</a></li>
+          <li class="pipe-separate t-light-blue left"><a href="/login">login</a></li>
+          <% else %>
+          <li class="pipe-separate t-light-blue left"><a href="/users/<%=User.find_by_username(session["user"]).id%>/entries"><%= session["user"]%></a></li>
+          <li class="pipe-separate t-light-blue left"><a href="/logout">logout</a></li>
+          <% end %>
           <li class="pipe-separate t-light-blue left"><a href="/">home</a></li>
         </ul>
       </nav>
