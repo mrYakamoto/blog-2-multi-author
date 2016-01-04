@@ -1,0 +1,15 @@
+<div class="w-100 text-c wrap-float">
+  <% if @email_error || @password_error %>
+  <h5>Something went wrong ...</h5>
+  <h5 class='pad-l-2'><%= @email_error %></h5>
+  <h5 class='pad-l-2'><%= @password_error %></h5>
+  <% end %>
+  <h2 class=''>Login to Broccoli Blog</h2><br>
+  <form class='text-c w-100' action='/login/check' method='get'>
+    <label class='left pad-l-4'>email:</label><br>
+    <input type='text' name='email'><br><br>
+    <label class= 'left pad-l-4'>password:</label><br>
+    <input type='text' name='password'><br><br>
+    <input class='login-submit' type='submit' value='submit' width='35'><br>
+  </form>
+</div>

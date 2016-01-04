@@ -1,0 +1,17 @@
+<div class="w-100 text-c wrap-float">
+  <% if @username_error || @email_error %>
+  <h5>Something went wrong ...</h5>
+  <h5 class=><%= @username_error %></h5>
+  <h5 class=><%= @email_error %></h5>
+  <% end %>
+  <h2 class=''>Create a Broccoli Blog Account</h2>
+  <form class='text-c w-100' action='/register/check' method='get'>
+    <label class='left pad-l-4'>username:</label><br>
+    <input type='text' name='username'><br><br>
+    <label class='left pad-l-4'>email:</label><br>
+    <input type='text' name='email'><br><br>
+    <label class='left pad-l-4'>password:</label><br>
+    <input type='text' name='password'><br><br>
+    <input class='login-submit' type='submit' value='submit'><br>
+  </form>
+</div>
