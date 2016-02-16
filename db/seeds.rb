@@ -1,4 +1,8 @@
 # Blog entry content courtesy of veggieipsum.com.
+greg = User.new(username: "greg", email: "greg")
+greg.password=("greg")
+greg.save
+
 
 content_for_entries = [
   { :title => "Salsify Taro Catsear Garlic",
@@ -23,4 +27,4 @@ content_for_entries = [
     :body  => "Water spinach arugula pea tatsoi aubergine spring onion bush tomato kale radicchio turnip chicory salsify pea sprouts fava bean. Dandelion zucchini burdock yarrow chickpea dandelion sorrel courgette turnip greens tigernut soybean radish artichoke wattle seed endive groundnut broccoli arugula."}
 ]
 
-Entry.create!(content_for_entries)
+greg.entries.create!(content_for_entries)
